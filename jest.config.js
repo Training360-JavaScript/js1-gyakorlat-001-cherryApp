@@ -1,7 +1,7 @@
 module.exports = {
     preset: "jest-puppeteer",
     globals: {
-        URL: "http://localhost:8080"
+        URL: "http://127.0.0.1:8080"
     },
     verbose: true
 };

@@ -10,7 +10,7 @@ const getText = (page, elementHandle) => {
 beforeAll(async () => {
     const path = fs.realpathSync('index.html');
     console.log("FILEPATH: ", path);
-    await page.goto(path, { waitUntil: 'domcontentloaded' });
+    await page.goto('file://' + path, { waitUntil: 'domcontentloaded' });
 });
 
 describe('1. Feladat', () => {

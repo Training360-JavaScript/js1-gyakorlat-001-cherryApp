@@ -9,7 +9,6 @@ const getText = (page, elementHandle) => {
 // Go to the specified path and wait for the domcontent to load before running the tests
 beforeAll(async () => {
     const path = fs.realpathSync('index.html');
-    console.log("FILEPATH: ", path);
     await page.goto('file://' + path, { waitUntil: 'domcontentloaded' });
 });
 

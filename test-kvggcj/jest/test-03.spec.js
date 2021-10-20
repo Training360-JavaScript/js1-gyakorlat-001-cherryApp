@@ -14,7 +14,7 @@ const checkConsole = (page, waitForRegex) => {
 // Go to the specified path and wait for the domcontent to load before running the tests
 beforeAll(async () => {
     const path = fs.realpathSync('index.html');
-    await page.goto(path, { waitUntil: 'domcontentloaded' });
+    await page.goto('file://' + path, { waitUntil: 'domcontentloaded' });
 });
 
 describe('1. Feladat', () => {
